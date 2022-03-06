@@ -7,26 +7,18 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import tableStyles from './Styles';
-import moment from 'moment';
+import getTime from '../../lib/functions/getTime';
 
 export default function TableComponent({ swapApiData }) {
-  const classes = tableStyles();
+  const classes = tableStyles('');
   const data = swapApiData.swaps;
 
-  const getTime = (time) => {
-    const dateObj = new Date(time * 1000);
-    const now = new Date();
-    const seconds = (now.getTime() - dateObj.getTime()) / 1000;
-    const finalTime = moment().subtract(seconds, 'seconds').calendar();
-    return finalTime;
-  };
+
 
   const getTransaction = (token0) => {
     return parseInt(token0) === 0 ? 'ETH for USDC' : 'USDC for ETH';
   };
 
-  console.log(getTime());
-  console.log(data);
   return (
     <Paper className={classes.root}>
       <Table className={classes.table}>
@@ -57,7 +49,7 @@ export default function TableComponent({ swapApiData }) {
                 <TableCell
                   component="th"
                   scope="row"
-                  className={classes.TableCell}
+                  className={classes.tableCell}
                 >
                   {getTransaction(transaction.amount0In)}
                 </TableCell>
@@ -67,7 +59,7 @@ export default function TableComponent({ swapApiData }) {
                 <TableCell numeric className={classes.tableCell}>
                   {transaction.amount0In == 0
                     ? Math.floor(transaction.amount0Out * 100) / 100
-                    : Math.floor(transaction.amount1In * 100) / 100} USDC
+                    : Math.floor(transaction.amount0In * 100) / 100} USDC
                 </TableCell>
                 <TableCell numeric className={classes.tableCell}>
                   {transaction.amount1In == 0
