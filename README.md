@@ -1,37 +1,39 @@
-# Frontend Coding Challenge — Ondo Finance
+# Total time spent: 6:30h - 4:30(frontend) - 2:00 ("backend")
+
+## Live version link
+
+https://ondo-project.vercel.app/
 
 ## Overview
+Greeting for everyone in ondo finance, hope you enjoy my test.
+The application consists in a material ui frontend and a web3 + infura "backend". I've used next.js for organization pourpuses (not having to deal with routes). The biggest problem (still unsolved) was to fetch the addliquidity and removeliquidity events. I'm very sure that it could be a simple thing to do, but kept me stuck for some time decoding inputs to get the event names then filtering it. Despite it, i could do everything easily.
 
-Our frontend team builds the web application that enables our users to interact with the Ondo Protocol, as well as resources and tooling to help them make educated investment decisions. Many of these services read data directly from the blockchain.
+I've put some effort in the frontend and design part cause it's important for me that you know that i'm capable of both projecting an ui and designing an application. Also, the application is mobile responsive.
 
-The goal of this challenge is to build a simple web application that monitors transactions in the [`USDC-ETH` pair](https://v2.info.uniswap.org/pair/0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc) on Uniswap V2.
+I've took a decision to keep both websockets and http requests on the application so we could keep a pattern closest to the example you've sent. I also kept the subgraph part for you to compare the fetched data. Thanks a lot for your time and the test. I'm very excited for the feedback.
 
-> ***We don't expect you to be familiar with any of the tools below. We're hoping to give you a preview of our tech stack and day-to-day tasks, while assessing your ability to pick up new concepts and tools on the go.***
-
-
-## Instructions
-
-### Context
-
-- Ondo uses Typescript, React, `material-ui`, `ethers.js`, and `web3-react` for its frontend.
-- Uniswap V2 pools allow for three primary transaction types: swapping assets, adding liquidity, and removing liquidity. 
-
-### Task
-
-1) Build a simple web application using [React](https://reactjs.org/) and [`material-ui`](https://mui.com/) (either V4 or V5) that monitors the `USDC-ETH` pool on Uniswap V2. Namely, the web application should display *live* updates of the three primary transaction types from *all* users in a table. The data should be retrieved directly from the Ethereum network (e.g. using Metamask, Alchemy, or similar).
-
-2) Create a custom theme for `material-ui` which imports a [Google Font](https://fonts.google.com/).
-
-3) Host the web application on [surge.sh](https://surge.sh/) (free).
-
-4) Submit your source code to this repository and include your hosted URL.
-
-> ***Please don't publish this coding challenge or your solution. We're hoping to avoid plagiarism in the future. Thank you!***
+I also maitened the infura api key codes on the application on pourpuse, so you can run it without havinf to use your ones. I that was a public project i would kept them private, of course.
 
 
-## Hints & Suggestions
+## Tasks Completed
+-Frontend in React / Material-ui
+-Typescript
+-Functional application 
+-Mobile Responsive
+-Fetch data from web3 (also maintened the graphql query)
+-Used Web over ethers because of personal preferences
+-UI/UX looks good
+-Live data using websockets
 
-- The only requirement is that you use React and `material-ui`. You can choose the remaining tools (e.g. `ethers.js` vs. `web3.js`).
-- You *must* retrieve the data directly from the Ethereum network (i.e. not using services like Etherscan).
 
-> ***Let us know if you need any clarifications. If you're not able to complete the entire challenge, please submit a partial solution. Best of luck!***
+## Things that could be improved with more time
+- Tests (of course)
+- Types (The "backend" typing really need improvments also some in the frontend)
+- Component organization (Usually, both UI and functions are much more organized than that, using atomic pattern)
+- Comments, usually, i like to explain what my functions does.
+
+
+### Things that i could not do
+-As i'm more used to getting data directly from a backend or a subgraph, i couldn't find a way to display live and requested data from add and remove liquidity. Acctually, i've been able tho acomplish that by geting the transaction hash from all the events, deconding the transaction input, and the getting the add liquidity and remove liquidity methods. I've done that using abi decoder and a different other than the one i use to get the events. It was working, but i've discarded that due to performance issues (i had to do thousands of requests and decode the inputs of them to get 4 or 5 add/remove liquidity events). In a normal situtation, i would ask for help, of course.
+
+
