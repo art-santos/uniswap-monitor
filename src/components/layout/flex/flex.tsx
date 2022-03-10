@@ -8,7 +8,7 @@ import { makeStyles, Typography } from '@material-ui/core';
 const flexStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    width: '80%',
+    width: '100%',
     margin: 'auto',
   },
   heading: {
@@ -21,7 +21,7 @@ const FlexHeading = ({ heading, ...rest }) => {
   const classes = flexStyles();
   return (
     <Box className={classes.root} {...rest}>
-      <Typography variant="h3" className={classes.heading}>
+      <Typography variant="h3" gutterBottom className={classes.heading}>
         {heading}
       </Typography>
     </Box>

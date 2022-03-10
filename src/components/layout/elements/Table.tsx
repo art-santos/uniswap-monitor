@@ -7,7 +7,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import tableStyles from './Styles';
-import getTime from '../../lib/functions/getTime';
+import getTime from '../../../lib/functions/getTime';
 
 export default function TableComponent({ swapApiData }) {
   const classes = tableStyles('');

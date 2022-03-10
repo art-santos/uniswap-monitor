@@ -4,12 +4,12 @@ import { StylesProvider } from '@material-ui/styles';
 import { ThemeProvider as StyledComponentProvider } from 'styled-components';
 import { ThemeProvider as MaterialUiProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-
+import { Web3ReactProvider } from '@web3-react/core'
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 
 import theme from '../themes/theme';
-import Navigation from '../components/vertical-navs/VerticalNav3';
+import Navigation from '../components/layout/Sidebar/VerticalNav3';
 
 export default function App ({ Component, pageProps }){
     

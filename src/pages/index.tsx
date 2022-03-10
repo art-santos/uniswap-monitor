@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Table from '../components/elements/Table';
+import Table from '../components/layout/elements/Table';
 
-import FlexHeading from '../components/flex/flex';
+import FlexHeading from '../components/layout/flex/flex';
 
 import { useQuery } from '@apollo/client';
 import ALL_TRANSACTIONS_QUERY from '../../queries/AllTransactions';

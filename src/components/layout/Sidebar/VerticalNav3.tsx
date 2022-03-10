@@ -27,8 +27,8 @@ export default function Navigation(props) {
   const content = {
     brand: { image: '/ondo-logo.svg', width: 110 },
     'brand-mobile': { image: '/logo-ondo.svg', width: 110 },
-    link1: 'All Transactions',
-    link2: 'Swaps',
+    link1: 'All Transactions The Graph',
+    link2: 'All Transactions Web3',
     link3: 'Added',
     link4: 'Removed',
     'primary-action': 'Connect',
@@ -114,28 +114,12 @@ export default function Navigation(props) {
                 <ListItemText primary={content['link1']} />
               </ListItem>
             </Link>
-            <Link href="/">
+            <Link href="/web3">
               <ListItem button key={content['link2']}>
                 <ListItemIcon className={classes.iconWrapper}>
                   <SwapCallsIcon className={classes.icon} />
                 </ListItemIcon>
                 <ListItemText primary={content['link2']} />
-              </ListItem>
-            </Link>
-            <Link href="/">
-              <ListItem button key={content['link3']}>
-                <ListItemIcon className={classes.iconWrapper}>
-                  <AddIcon className={classes.icon} />
-                </ListItemIcon>
-                <ListItemText primary={content['link3']} />
-              </ListItem>
-            </Link>
-            <Link href="/">
-              <ListItem button key={content['link4']}>
-                <ListItemIcon className={classes.iconWrapper}>
-                  <RemoveIcon className={classes.icon} />
-                </ListItemIcon>
-                <ListItemText primary={content['link4']} />
               </ListItem>
             </Link>
           </List>
@@ -170,6 +154,12 @@ export default function Navigation(props) {
               </ListItemIcon>
               <ListItemText primary={content['link1']} />
             </ListItem>
+            <ListItem button key={content['link2']}>
+              <ListItemIcon className={classes.iconWrapper}>
+                <CompareArrowsIcon className={classes.icon} />
+              </ListItemIcon>
+              <ListItemText primary={content['link2']} />
+            </ListItem>
           </List>
           <Box
             mt={1}
@@ -183,11 +173,6 @@ export default function Navigation(props) {
           >
             <Button variant="contained" color="secondary" fullWidth>
               {content['primary-action']}
-            </Button>
-          </Box>
-          <Box mt={2} ml={2}>
-            <Button variant="outlined" color="primary" fullWidth>
-              {content['secondary-action']}
             </Button>
           </Box>
         </div>

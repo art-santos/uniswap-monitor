@@ -25,5 +25,5 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/pages/_document.tsx", "src/components/elements/Table.tsx", "src/components/flex/flex.js", "src/components/link/link.js", "src/components/flex/flex.test.js"  ]
+, "src/pages/_document.tsx", "src/components/layout/elements/Table.tsx", "src/components/layout/flex/flexsrc/components/layout/vertical-navs/link/link.jslink.js", "src/components/layout/flex/flex.test.js"  ]
 }
