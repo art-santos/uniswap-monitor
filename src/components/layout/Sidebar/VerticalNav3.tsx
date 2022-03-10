@@ -16,8 +16,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import CompareArrowsIcon from '@material-ui/icons/CompareArrows';
 import SwapCallsIcon from '@material-ui/icons/SwapCalls';
-import AddIcon from '@material-ui/icons/Add';
-import RemoveIcon from '@material-ui/icons/Remove';
 
 import NavigationStyles from './Styles';
 
