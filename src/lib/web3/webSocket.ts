@@ -2,7 +2,6 @@ import getTime from "../functions/getTime";
 import { wsProvider, httpProvider, ABI  } from "./providers";
 
 export default async function getWebSocketsData({ webSocketData, setWebsocketData }){
-    let count = 0;
     const blockNumber = await wsProvider.eth.getBlockNumber(); 
 
     const contract = new wsProvider.eth.
