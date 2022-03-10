@@ -1,5 +1,9 @@
 # Total time spent: 6:30h - 4:30(frontend) - 2:00 ("backend")
 
+## Live version link
+
+https://ondo-project.vercel.app/
+
 ## Overview
 Greeting for everyone in ondo finance, hope you enjoy my test.
 The application consists in a material ui frontend and a web3 + infura "backend". I've used next.js for organization pourpuses (not having to deal with routes). The biggest problem (still unsolved) was to fetch the addliquidity and removeliquidity events. I'm very sure that it could be a simple thing to do, but kept me stuck for some time decoding inputs to get the event names then filtering it. Despite it, i could do everything easily.
@@ -8,6 +12,7 @@ I've put some effort in the frontend and design part cause it's important for me
 
 I've took a decision to keep both websockets and http requests on the application so we could keep a pattern closest to the example you've sent. I also kept the subgraph part for you to compare the fetched data. Thanks a lot for your time and the test. I'm very excited for the feedback.
 
+I also maitened the infura api key codes on the application on pourpuse, so you can run it without havinf to use your ones. I that was a public project i would kept them private, of course.
 
 
 ## Tasks Completed
