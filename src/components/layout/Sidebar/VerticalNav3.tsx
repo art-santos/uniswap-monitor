@@ -23,8 +23,8 @@ export default function Navigation(props) {
   const classes = NavigationStyles();
 
   const content = {
-    brand: { image: '/ondo-logo.svg', width: 110 },
-    'brand-mobile': { image: '/logo-ondo.svg', width: 110 },
+    brand: { image: '/.svg', width: 110 },
+    'brand-mobile': { image: '/.svg', width: 110 },
     link1: 'All Transactions The Graph',
     link2: 'All Transactions Web3',
     link3: 'Added',

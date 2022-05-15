@@ -1,5 +1,5 @@
 {
-  "name": "ondo-project",
+  "name": "price-monitor-project",
   "version": "0.0.1",
   "scripts": {
     "dev": "next",

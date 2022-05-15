@@ -31,8 +31,6 @@ export default async function getWebSocketsData({ webSocketData, setWebsocketDat
         
         const time = httpProvider.eth.getBlock(value.blocknumber);
         value.time = getTime(time.timestamp);
-        count++;
-        console.log(value);
         setWebsocketData([...webSocketData, value]);
         return value;
     })
